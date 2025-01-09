@@ -1,0 +1,103 @@
+/* General */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.general-background-container {
+    background: url('../css/images/mainbg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Header */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #505050, #303030);
+    padding: 0.625rem 1.25rem;
+    color: white;
+}
+
+.logo img {
+    height: 5rem;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    background: #4c4c4c;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+}
+
+.nav-link:hover {
+    background: #ffcc33;
+    color: black;
+    transition: 0.3s ease;
+}
+
+.login-register {
+    background: #ffcc33;
+    border-radius: 0.3125rem;
+    padding: 0.625rem 1.25rem;
+}
+
+.login-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.login-link:hover {
+    color: #ffffff;
+    transition: 0.3s ease;
+}
+
+/* Home Page */
+
+.home-background-container {
+    background: url('../css/images/main.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.booknow-btn {
+    margin-top: 12rem;
+    padding: 0.9375rem 1.875rem;
+    background-color: #7e77e79a;
+    border: 0.3125rem solid #ffe38a;
+    border-radius: 1.3em;
+    color: #ffe38a;
+    font-size: 2rem;
+    font-weight: bolder;
+    box-shadow: 0rem 0rem 1.5rem #ffe38a;
+    cursor: pointer;
+}
+
+.booknow-btn:hover {
+    background-color: #7e77e7e3;
+    transition: 0.2s ease;
+}
+
+/* Register */
+
