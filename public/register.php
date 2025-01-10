@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
                 <input type="submit" value="Register"><br><br> <!--this is the submit button-->
 
-                <a href="login.php" class="login-link">Already a user? Log in</a>
+                <a href="login.php" class="registration-link">Already a user? Log in</a>
                 <!--this is the redirect link which goes to login-->
             </form>
         </div>

@@ -1,7 +1,5 @@
 <?php
 
-session_start(); //this starts the session
-
 include '../config/db.php'; //this links the database file
 
 include '../templates/header.php';
@@ -66,7 +64,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             
                 <input type="submit" value="Login"><br><br> <!--this is the submit button-->
 
-                <a href="register.php" class="login-link">Not got an account? Register here</a>
+                <a href="register.php" class="registration-link">Not got an account? Register here</a>
                 <!--this is the redirect link which goes to register-->
             </form>
         </div>

@@ -52,21 +52,41 @@ body {
     transition: 0.30s ease;
 }
 
+.login-register-logout-container {
+    text-decoration: none;
+    background: #4c4c4c00;
+}
+
+.nav-link-logout {
+    text-decoration: none;
+    color: white;
+    background: #d80000;
+    padding: 0.60rem 1.30rem;
+    border-radius: 0.30rem;
+    font-size: 1.00rem;
+}
+
+.nav-link-logout:hover {
+    background: #980000;
+    transition: 0.30s ease;
+}
+
 .login-register {
     background: #ffcc33;
     border-radius: 0.30rem;
     padding: 0.60rem 1.30rem;
 }
 
+.login-register:hover {
+    background: #bc941b;
+    transition: 0.30s ease;
+    cursor: pointer;
+}
+
 .login-link {
     text-decoration: none;
     color: black;
     font-weight: bold;
-}
-
-.login-link:hover {
-    color: #ffffff;
-    transition: 0.20s ease;
 }
 
 /* Home Page */
@@ -95,7 +115,7 @@ body {
 
 .booknow-btn:hover {
     background-color: #7e77e7e3;
-    transition: 0.20s ease;
+    transition: 0.30s ease;
 }
 
 /* Register & Login */
@@ -189,4 +209,13 @@ input[type="submit"]:active {
     color: #00d75a;
     font-weight: bold;
     margin-top: 1.00rem;
+}
+
+.registration-link {
+    font-style: none;
+}
+
+.registration-link:hover {
+    transition: ease 0.30s;
+    color: #febf00;
 }
