@@ -46,11 +46,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 
-<link rel="stylesheet" href="../css/style.css"> <!--links the stylesheet-->
-<title>Canteen Register</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css"> <!--links the stylesheet-->
+    <title>Astro-Max Register</title>
+</head>
 <body>
     <div class="general-background-container">
-        <div class="container">
+        <div class="register-and-login-container">
             <h2>Register</h2>
             <form action="register.php" method="POST"> <!--this is the form which posts the form details-->
                 <label for="username">Username: </label>
@@ -80,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="submit" value="Register"><br><br> <!--this is the submit button-->
 
                 <a href="login.php" class="login-link">Already a user? Log in</a>
-                <!--this is the redirect link which goes to register-->
+                <!--this is the redirect link which goes to login-->
             </form>
         </div>
     </div>
