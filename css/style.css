@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    overflow: hidden;
 }
 
 .general-background-container {
@@ -12,7 +11,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex;
     text-align: center;
 }
 
