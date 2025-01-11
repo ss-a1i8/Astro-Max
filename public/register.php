@@ -60,15 +60,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h2>Register</h2>
             <form action="register.php" method="POST"> <!--this is the form which posts the form details-->
                 <label for="username">Username: </label>
-                <input type="text" id="username" name="username" placeholder="Enter Username" required><br>
+                <input type="text" class="reg-login" id="username" name="username" placeholder="Enter Username" required><br>
                 <!--this is the username input box-->
 
                 <label for="password">Password: </label>
-                <input type="password" id="password" name="password" placeholder="Enter Password" required><br>
+                <input type="password" class="reg-login" id="password" name="password" placeholder="Enter Password" required><br>
                 <!--password box which masks the password when entering-->
 
                 <label for="confirmpassword">Confirm Password: </label>
-                <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" required><br>
+                <input type="password" class="reg-login" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" required><br>
                 <!--password confirm to ensure the password is correct-->
 
                 <?php if(isset($errormsg)): ?>
@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 <?php endif; ?><br>
             
-                <input type="submit" value="Register"><br><br> <!--this is the submit button-->
+                <input type="submit" value="Register" class="reg-and-login-btn"><br><br> <!--this is the submit button-->
 
                 <a href="login.php" class="registration-link">Already a user? Log in</a>
                 <!--this is the redirect link which goes to login-->

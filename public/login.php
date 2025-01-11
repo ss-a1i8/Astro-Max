@@ -43,11 +43,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             <h2>Login</h2>
             <form action="login.php" method="POST"> <!--this is the form which posts the form details-->
                 <label for="username">Username: </label>
-                <input type="text" id="username" name="username" placeholder="Enter Username" required><br>
+                <input type="text" id="username" name="username" class="reg-login" placeholder="Enter Username" required><br>
                 <!--this is the username input box-->
 
                 <label for="password">Password: </label>
-                <input type="password" id="password" name="password" placeholder="Enter Password" required><br>
+                <input type="password" id="password" class="reg-login" name="password" placeholder="Enter Password" required><br>
                 <!--password box which masks the password when entering-->
 
                 <?php if(isset($errormsg)): ?>
@@ -62,7 +62,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     </div>
                 <?php endif; ?><br>
             
-                <input type="submit" value="Login"><br><br> <!--this is the submit button-->
+                <input type="submit" value="Login" class="reg-and-login-btn"><br><br> <!--this is the submit button-->
 
                 <a href="register.php" class="registration-link">Not got an account? Register here</a>
                 <!--this is the redirect link which goes to register-->

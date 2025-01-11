@@ -154,8 +154,7 @@ label {
     color: #000000;
 }
 
-input[type="text"],
-input[type="password"] {
+.reg-login  {
     padding: 0.90rem;
     border: 0.20rem solid #00000088;
     border-radius: 0.50rem;
@@ -165,8 +164,7 @@ input[type="password"] {
     transition: all 0.30s ease;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
+.reg-login:focus {
     border-color: #ffc413;
     border-width: 0.20rem;
     background-color: #c2c2c2;
@@ -174,7 +172,7 @@ input[type="password"]:focus {
     outline: none;
 }
 
-input[type="submit"] {
+.reg-and-login-btn {
     padding: 0.90rem;
     margin-top: 1.50rem;
     border: none;
@@ -187,12 +185,12 @@ input[type="submit"] {
     transition: background-color 0.30s ease, transform 0.20s ease;
 }
 
-input[type="submit"]:hover {
+.reg-and-login-btn:hover {
     background-color: #c89b15;
     transform: translateY(-0.20rem);
 }
 
-input[type="submit"]:active {
+.reg-and-login-btn:active {
     background-color: #c89b15;
     transform: translateY(-0.70rem);
 }
@@ -206,7 +204,7 @@ input[type="submit"]:active {
 
 .good-box {
     font-size: 1.15rem;
-    color: #00d75a;
+    color: #169300;
     font-weight: bold;
     margin-top: 1.00rem;
 }
@@ -218,4 +216,98 @@ input[type="submit"]:active {
 .registration-link:hover {
     transition: ease 0.30s;
     color: #febf00;
+}
+
+/* Management Dash */
+
+.roles-changing-container {
+    margin: 40px;
+    background-color: #a0a0a0;
+    max-height: fit-content;
+    padding: 23px;
+    border-radius: 23px;
+}
+
+.management-headings {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+.roles-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    color: #444444;
+}
+
+select:focus {
+    border: 2px solid #febf00;
+}
+
+.updatebtn {
+    background-color: #febf00;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.updatebtn:hover {
+    background-color: #c09514;
+    transition: ease 0.30s;
+}
+
+.staff-register-container {
+    margin: 40px;
+    background-color: #a0a0a0;
+    max-height: fit-content;
+    max-width: fit-content;
+    min-width: 25rem;
+    padding: 23px;
+    border-radius: 23px;
+}
+
+.staff-register {
+    padding: 0.90rem;
+    border: 1px solid #ccc;
+    border-radius: 0.50rem;
+    font-size: 0.95rem;
+    transition: all 0.30s ease;
+}
+
+.staff-register:focus {
+    border-color: #ffc413;
+    border-width: 0.20rem;
+    outline: none;
+    transition: none;
+    transform: none;
+}
+
+.management-reg-btn {
+    background-color: #febf00;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.management-reg-btn:hover {
+    background-color: #c09514;
+    transition: ease 0.30s;
 }
