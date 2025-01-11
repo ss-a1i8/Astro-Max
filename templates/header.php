@@ -30,7 +30,13 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         <a href="#" class="nav-link">Activities</a>
         <a href="#" class="nav-link">Booking</a>
         <?php if ($isLoggedIn): ?>
-            <a href="http://localhost:3000/public/profile.php" class="nav-link">Profile</a>
+            <?php if ($role === 'customer'): ?>
+                <a href="http://localhost:3000/public/customer.php" class="nav-link">Profile</a>
+            <?php elseif ($role === 'staff'): ?>
+                <a href="http://localhost:3000/public/staff.php" class="nav-link">Dashboard</a>
+            <?php elseif ($role === 'management'): ?>
+                <a href="http://localhost:3000/public/management.php" class="nav-link">Dashboard</a>
+            <?php endif; ?>
         <?php endif; ?>
     </nav>
     <div class="login-register-logout-container">
