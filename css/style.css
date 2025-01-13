@@ -197,14 +197,14 @@ label {
 }
 
 .error-box {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     color: #ff1900;
     font-weight: bold;
     margin-top: 1rem;
 }
 
 .good-box {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     color: #169300;
     font-weight: bold;
     margin-top: 1rem;
@@ -225,8 +225,8 @@ label {
     margin: 2.5rem;
     background-color: #a0a0a0;
     max-height: fit-content;
-    padding: 1.45rem;
-    border-radius: 1.45rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
 }
 
 .management-headings {
@@ -241,16 +241,16 @@ label {
 }
 
 select {
-    padding: 0.625rem;
-    margin-bottom: 0.9375rem;
-    border-radius: 0.3125rem;
-    border: 0.0625rem solid #ccc;
-    font-size: 0.95rem;
+    padding: 0.6rem;
+    margin-bottom: 0.9rem;
+    border-radius: 0.3rem;
+    border: 0.1rem solid #ccc;
+    font-size: 1rem;
     color: #444444;
 }
 
 select:focus {
-    border: 0.125rem solid #febf00;
+    border: 0.1rem solid #febf00;
 }
 
 .updatebtn {
@@ -258,10 +258,10 @@ select:focus {
     color: rgb(0, 0, 0);
     cursor: pointer;
     font-weight: bold;
-    padding: 0.625rem;
-    margin-bottom: 0.9375rem;
-    border-radius: 0.3125rem;
-    border: 0.0625rem solid #ccc;
+    padding: 0.6rem;
+    margin-bottom: 0.9rem;
+    border-radius: 0.3rem;
+    border: 0.1rem solid #ccc;
     font-size: 1rem;
 }
 
@@ -276,21 +276,21 @@ select:focus {
     max-height: fit-content;
     max-width: fit-content;
     min-width: 25rem;
-    padding: 1.45rem;
-    border-radius: 1.45rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
 }
 
 .staff-register {
     padding: 0.9rem;
-    border: 0.0625rem solid #ccc;
+    border: 0.1rem solid #ccc;
     border-radius: 0.5rem;
-    font-size: 0.95rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
 }
 
 .staff-register:focus {
     border-color: #ffc413;
-    border-width: 0.125rem;
+    border-width: 0.1rem;
     outline: none;
     transition: none;
     transform: none;
@@ -301,10 +301,10 @@ select:focus {
     color: rgb(0, 0, 0);
     cursor: pointer;
     font-weight: bold;
-    padding: 0.625rem;
-    margin-bottom: 0.9375rem;
-    border-radius: 0.3125rem;
-    border: 0.0625rem solid #ccc;
+    padding: 0.6rem;
+    margin-bottom: 0.9rem;
+    border-radius: 0.3rem;
+    border: 0.1rem solid #ccc;
     font-size: 1rem;
 }
 
