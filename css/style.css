@@ -312,3 +312,55 @@ select:focus {
     background-color: #c09514;
     transition: ease 0.3s;
 }
+
+/* Activities */
+
+.activity-background-container {
+    background: radial-gradient(circle, rgb(87, 87, 87) 0%, rgb(9, 9, 9) 100%);
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: flex;
+    text-align: center;
+    gap: 1rem;
+}
+
+.seperate-activity-containers {
+    background-color: #afafaf;
+    border: 0.3rem solid #00000096;
+    border-radius: 1rem;
+    max-width: fit-content;
+    max-height:fit-content;
+    margin-top: 3rem;
+    width: 100%;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: none;
+    text-align: center;
+}
+
+.seperate-activity-containers:hover {
+    transform: translateY(-0.3rem);
+    border-color: #ffcc33;
+    border-width: 0.2rem;
+    transition: transform 0.3s ease;
+}
+
+.seperate-activity-containers img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+    margin-top: 0.8rem;
+}
+
+.seperate-activity-containers strong {
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.seperate-activity-containers p {
+    font-size: 1.2rem;
+    color: #000000;
+    line-height: 1.5;
+    margin-top: 0.6rem;
+}
