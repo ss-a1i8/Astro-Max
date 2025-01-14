@@ -19,6 +19,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
 
 
 
+<link rel="stylesheet" href="../css/style.css">
 <header class="navbar">
     <div class="logo">
         <a href="http://localhost:3000/public/home.php">
