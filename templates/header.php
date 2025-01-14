@@ -10,7 +10,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     session_unset();
     session_destroy();
 
-    header("Location: http://localhost:3000/public/home.php");
+    header("Location: ../public/home.php");
     exit();
 }
 
@@ -22,21 +22,21 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
 <link rel="stylesheet" href="../css/style.css">
 <header class="navbar">
     <div class="logo">
-        <a href="http://localhost:3000/public/home.php">
+        <a href="../public/home.php">
             <img src="../css/images/logo.png" alt="Astro-Max Logo">
         </a>
     </div>
     <nav class="nav-links">
-        <a href="http://localhost:3000/public/home.php" class="nav-link">Home</a>
+        <a href="../public/home.php" class="nav-link">Home</a>
         <a href="../public/activity.php" class="nav-link">Activities</a>
         <a href="#" class="nav-link">Booking</a>
         <?php if ($isLoggedIn): ?>
             <?php if ($role === 'customer'): ?>
-                <a href="http://localhost:3000/public/customer.php" class="nav-link">Profile</a>
+                <a href="../public/customer.php" class="nav-link">Profile</a>
             <?php elseif ($role === 'staff'): ?>
-                <a href="http://localhost:3000/public/staff.php" class="nav-link">Dashboard</a>
+                <a href="../public/staff.php" class="nav-link">Dashboard</a>
             <?php elseif ($role === 'management'): ?>
-                <a href="http://localhost:3000/public/management.php" class="nav-link">Dashboard</a>
+                <a href="../public/management.php" class="nav-link">Dashboard</a>
             <?php endif; ?>
         <?php endif; ?>
     </nav>
@@ -47,7 +47,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
             </div>
         <?php else: ?>
             <div class="login-register">
-                <a href="http://localhost:3000/public/login.php" class="login-link">Login | Register</a>
+                <a href="../public/login.php" class="login-link">Login | Register</a>
             </div>
         <?php endif; ?>
     </div>
