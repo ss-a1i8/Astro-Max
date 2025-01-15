@@ -16,11 +16,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['select_staff_id'], $_
     $stmt = $pdo->prepare("UPDATE users SET role = :role WHERE user_id = :user_id");
     $stmt->execute(['role' => $newRole, 'user_id' => $selectedStaffId]);
 
-    header("Location: http://localhost:3000/public/management.php");
+    header("Location: " . $_SERVER['PHP_SELF']);
     exit();
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['activity_name'], $_POST['activity_description'])) {
+    $activityName = trim($_POST['activity_name']);
+    $activityDescription = trim($_POST['activity_description']);
+
+    $stmt = $pdo->prepare("SELECT * FROM activities WHERE activity_name = :activity_name");
+    $stmt->execute(['activity_name' => $activityName]);
+
+    if ($stmt->rowCount() > 0) {
+        $errormsgactivity = "Activity name already exists";
+    } else {
+        $stmt = $pdo->prepare("INSERT INTO activities (activity_name, activity_description) VALUES (:activity_name, :activity_description)");
+        $stmt->execute(['activity_name' => $activityName,'activity_description' => $activityDescription,]);
+
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit();
+    }
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'], $_POST['password'],$_POST['confirmpassword'] )) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $confirmpassword = $_POST['confirmpassword'];
@@ -124,6 +142,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <?php endif; ?><br>
             
                 <input type="submit" value="Register" class="management-reg-btn">
+            </form>
+        </div>
+
+        <div class="activity-management-container">
+            <h2 class="management-headings">New Activity</h2>
+            <form action="management.php" method="POST">
+                <label for="activity_name">Name of activity:</label>
+                <input type="text" id="activity_name" name="activity_name" class="staff-register" maxlength="20" required placeholder="Max 20 characters"><br>
+
+                <label for="activity_description">Description of activity:</label>
+                <textarea id="activity_description" name="activity_description" class="staff-register" maxlength="280" required placeholder="Max 280 characters"></textarea><br>
+
+                <?php if(isset($errormsgactivity)): ?>
+                    <div class="error-box">
+                        <p><?php echo $errormsgactivity; ?></p>
+                    </div>
+                <?php endif; ?><br>
+
+                <button type="submit" class="management-reg-btn">Add Activity</button>
             </form>
         </div>
     </div>

@@ -313,6 +313,16 @@ select:focus {
     transition: ease 0.3s;
 }
 
+.activity-management-container {
+    margin: 2.5rem;
+    background-color: #a0a0a0;
+    max-height: fit-content;
+    max-width: fit-content;
+    min-width: 25rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
+
 /* Activities */
 
 .activity-background-container {
@@ -338,6 +348,8 @@ select:focus {
     padding-top: 2rem;
     text-align: center;
     display: inline-grid;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .seperate-activity-containers:hover {
@@ -364,4 +376,7 @@ select:focus {
     color: #000000;
     line-height: 1.5;
     margin-top: 0.6rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
