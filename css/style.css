@@ -318,25 +318,26 @@ select:focus {
 .activity-background-container {
     background: radial-gradient(circle, rgb(87, 87, 87) 0%, rgb(9, 9, 9) 100%);
     display: flex;
-    min-height: 100vh;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: flex;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 2rem;
+    gap: 1rem; 
+    overflow: auto; 
     text-align: center;
-    gap: 1rem;
 }
 
 .seperate-activity-containers {
     background-color: #afafaf;
     border: 0.3rem solid #00000096;
     border-radius: 1rem;
-    max-width: fit-content;
-    max-height:fit-content;
-    margin-top: 3rem;
-    width: 100%;
+    width: 20%;
+    margin: 0;
     padding: 1rem;
     padding-top: 2rem;
-    padding-bottom: none;
     text-align: center;
+    display: inline-grid;
 }
 
 .seperate-activity-containers:hover {

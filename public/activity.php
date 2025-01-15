@@ -1,7 +1,7 @@
 <?php
 
-require ('../config/db.php');
-include ('../templates/header.php');
+require '../config/db.php';
+include '../templates/header.php';
 
 $query = $pdo->query("SELECT * FROM activities");
 $items = $query->fetchALL(PDO::FETCH_ASSOC);
@@ -24,7 +24,7 @@ $items = $query->fetchALL(PDO::FETCH_ASSOC);
             <div class="seperate-activity-containers">
                 <strong><?php echo htmlspecialchars($item["activity_name"]); ?></strong><br><br>
                 <img src="<?php echo htmlspecialchars($item["activity_img"]); ?>"><br><br>
-                <p><?php echo htmlspecialchars($item["activity_description"]); ?></p><br><br>
+                <p><?php echo htmlspecialchars($item["activity_description"]); ?></p>
             </div>
         <?php endforeach; ?>
     </div>

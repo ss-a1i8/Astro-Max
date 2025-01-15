@@ -1,8 +1,8 @@
 <?php
 
-require ('../config/db.php');
+require '../config/db.php';
 
-include ('../templates/header.php');
+include '../templates/header.php';
 
 $stmt = $pdo->prepare("SELECT user_id, username, role FROM users WHERE role IN ('staff', 'management')");
 $stmt->execute();
