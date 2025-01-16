@@ -20,21 +20,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['select_staff_id'], $_
     exit();
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['activity_name'], $_POST['activity_description'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['activity_name'], $_POST['activity_description'], $_FILES['uploadfile'])) {
     $activityName = trim($_POST['activity_name']);
     $activityDescription = trim($_POST['activity_description']);
+    $fileName = $_FILES["uploadfile"]["name"];
+    $tempImgLocation = $_FILES["uploadfile"]["tmp_name"];
+    $finalImgLocation = "../activity-images/" . $fileName;
 
     $stmt = $pdo->prepare("SELECT * FROM activities WHERE activity_name = :activity_name");
     $stmt->execute(['activity_name' => $activityName]);
 
     if ($stmt->rowCount() > 0) {
-        $errormsgactivity = "Activity name already exists";
+        $errormsgactivity = "Activity already exists";
     } else {
-        $stmt = $pdo->prepare("INSERT INTO activities (activity_name, activity_description) VALUES (:activity_name, :activity_description)");
-        $stmt->execute(['activity_name' => $activityName,'activity_description' => $activityDescription,]);
-
-        header("Location: " . $_SERVER['PHP_SELF']);
-        exit();
+        $stmt = $pdo->prepare("INSERT INTO activities (activity_name, activity_description, activity_img) VALUES (:activity_name, :activity_description, :activity_img)");
+        $stmt->execute(['activity_name' => $activityName, 'activity_description' => $activityDescription, 'activity_img' => $finalImgLocation]);
+        
+        if (move_uploaded_file($tempImgLocation, $finalImgLocation)) {
+            $goodmsgactivity = "Image uploaded and activity added successfully";
+            header("Location: " . $_SERVER['PHP_SELF']);
+            exit();
+        } else {
+            $errormsgactivity = "Failed to upload image";
+        }
     }
 }
 
@@ -108,7 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'], $_POST['p
                     <option value="staff">Staff</option>
                     <option value="customer">Customer</option>
                     <option value="management">Management</option>
-                </select>
+                </select><br>
 
                 <button type="submit" class="updatebtn">Update Role</button>
             </form>
@@ -153,6 +161,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'], $_POST['p
 
                 <label for="activity_description">Description of activity:</label>
                 <textarea id="activity_description" name="activity_description" class="staff-register" maxlength="280" required placeholder="Max 280 characters"></textarea><br>
+
+                <label for="file">Activity image:</label>
+                <input id="file-upload" type="file" name="uploadfile" accept="image/png, image/jpeg, image/jfif" required />
 
                 <?php if(isset($errormsgactivity)): ?>
                     <div class="error-box">
