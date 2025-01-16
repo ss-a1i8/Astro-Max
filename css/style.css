@@ -402,3 +402,11 @@ select:focus {
     border-color: #767676;
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
+
+.delete-activity-container {
+    margin: 2.5rem;
+    background-color: #a0a0a0;
+    max-height: fit-content;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}

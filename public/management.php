@@ -8,6 +8,10 @@ $stmt = $pdo->prepare("SELECT user_id, username, role FROM users WHERE role IN (
 $stmt->execute();
 $staffMembers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+$stmt = $pdo->prepare("SELECT * FROM activities");
+$stmt->execute();
+$activities = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['select_staff_id'], $_POST['select_new_role'])) {
     $selectedStaffId = $_POST['select_staff_id'];
@@ -16,6 +20,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['select_staff_id'], $_
     $stmt = $pdo->prepare("UPDATE users SET role = :role WHERE user_id = :user_id");
     $stmt->execute(['role' => $newRole, 'user_id' => $selectedStaffId]);
 
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit();
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['select_activity_id'])) {
+    $delete_activity_id = $_POST['select_activity_id'];
+
+    $stmt = $pdo->prepare("DELETE FROM activities WHERE activity_id = :activity_id");
+    $stmt->execute(['activity_id' => $delete_activity_id]);
+
+    $goodmsg = "Activity deleted successfully.";
     header("Location: " . $_SERVER['PHP_SELF']);
     exit();
 }
@@ -172,6 +187,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'], $_POST['p
                 <?php endif; ?><br>
 
                 <button type="submit" class="management-reg-btn">Add Activity</button>
+            </form>
+        </div>
+
+        <div class="delete-activity-container">
+            <form method="POST" action="management.php">
+                <h2 class="management-headings">Delete Activity</h2>
+                <label class="roles-label" for="select-activity">Select Activity:</label>
+                <select id="select-activity" name="select_activity_id" required>
+                    <option value="" disabled selected>Activities</option>
+                    <?php foreach ($activities as $activity): ?>
+                        <option value="<?php echo htmlspecialchars($activity['activity_id']); ?>">
+                            <?php echo htmlspecialchars($activity['activity_name']); ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select><br>
+
+                <button type="submit" class="delete-activity-container">Delete Activity</button>
             </form>
         </div>
     </div>
