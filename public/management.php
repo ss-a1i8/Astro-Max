@@ -155,7 +155,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'], $_POST['p
 
         <div class="activity-management-container">
             <h2 class="management-headings">New Activity</h2>
-            <form action="management.php" method="POST">
+            <form action="management.php" method="POST" enctype="multipart/form-data">
                 <label for="activity_name">Name of activity:</label>
                 <input type="text" id="activity_name" name="activity_name" class="staff-register" maxlength="20" required placeholder="Max 20 characters"><br>
 
