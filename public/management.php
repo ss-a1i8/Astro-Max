@@ -203,7 +203,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'], $_POST['p
                     <?php endforeach; ?>
                 </select><br>
 
-                <button type="submit" class="delete-activity-container">Delete Activity</button>
+                <button type="submit" class="management-reg-btn">Delete Activity</button>
             </form>
         </div>
     </div>
