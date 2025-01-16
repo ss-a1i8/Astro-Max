@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['activity_name'], $_PO
     $activityDescription = trim($_POST['activity_description']);
     $fileName = $_FILES["uploadfile"]["name"];
     $tempImgLocation = $_FILES["uploadfile"]["tmp_name"];
-    $finalImgLocation = "../activity-images/" . $fileName;
+    $finalImgLocation = "../activity-img-uploads/" . $fileName;
 
     $stmt = $pdo->prepare("SELECT * FROM activities WHERE activity_name = :activity_name");
     $stmt->execute(['activity_name' => $activityName]);
