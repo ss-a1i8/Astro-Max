@@ -45,7 +45,7 @@ $fullyBookedDates = array_column(array_filter($bookedDates, fn($d) => $d['total_
     <title>Astro-Max | Booking</title>
 </head>
 <body>
-    <div class="activity-background-container">
+    <div class="general-background-container">
         <div class="calendar-main-container">
             <h1>Booking Calendar for <?php echo($justMonth) ?></h1><br><br>
             <form method="GET" action="booking_calendar.php">

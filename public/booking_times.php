@@ -30,7 +30,7 @@ $timeSlots = ['09:00:00', '10:00:00', '11:00:00', '12:00:00','13:00:00', '14:00:
     <title>Astro-Max | Booking</title>
 </head>
 <body>
-    <div class="activity-background-container">
+    <div class="general-background-container">
         <div class="times-main-container">
             <h1>Available Time Slots for <?= htmlspecialchars($date) ?></h1><br><br><br>
             <div class="time-slots">

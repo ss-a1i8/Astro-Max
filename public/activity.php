@@ -19,7 +19,7 @@ $items = $query->fetchALL(PDO::FETCH_ASSOC);
     <title>Astro-Max | Activities</title>
 </head>
 <body>
-    <div class="activity-background-container">
+    <div class="general-background-container">
         <?php foreach ($items as $item): ?>
             <div class="seperate-activity-containers">
                 <strong><?php echo htmlspecialchars($item["activity_name"]); ?></strong><br><br>

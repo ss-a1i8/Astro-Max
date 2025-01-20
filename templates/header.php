@@ -29,7 +29,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     <nav class="nav-links">
         <a href="../public/home.php" class="nav-link">Home</a>
         <a href="../public/activity.php" class="nav-link">Activities</a>
-        <a href="#" class="nav-link">Booking</a>
+        <a href="../public/booking_calendar.php" class="nav-link">Booking</a>
         <?php if ($isLoggedIn): ?>
             <?php if ($role === 'customer'): ?>
                 <a href="../public/customer.php" class="nav-link">Profile</a>

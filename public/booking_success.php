@@ -21,7 +21,7 @@ if (!isset($_SESSION['user_id'])) {
     <title>Astro-Max | Booking</title>
 </head>
 <body>
-    <div class="activity-background-container">
+    <div class="general-background-container">
         <div class="times-main-container">
             <h1 class="sucessfull-book">Your booking was successfull!</h1><br><br>
             <a href="booking_calendar.php">Book Again</a>
