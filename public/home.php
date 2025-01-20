@@ -16,7 +16,8 @@ include '../templates/header.php';
 </head>
 <body>
     <div class="home-background-container">
-        <button class="booknow-btn">BOOK NOW</button>
+        <a href="booking_calendar.php">
+            <button class="booknow-btn">BOOK NOW</button>
     </div>
 </body>
 </html>
