@@ -7,11 +7,15 @@ body {
 }
 
 .general-background-container {
-    background: url('../css/images/mainbg.png') no-repeat center center/cover;
-    height: 100vh;
+    background: radial-gradient(circle, rgb(87, 87, 87) 0%, rgb(9, 9, 9) 100%);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: flex;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 2rem;
+    gap: 1rem; 
+    overflow: auto; 
     text-align: center;
 }
 
@@ -325,19 +329,6 @@ select:focus {
 
 /* Activities */
 
-.activity-background-container {
-    background: radial-gradient(circle, rgb(87, 87, 87) 0%, rgb(9, 9, 9) 100%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 2rem;
-    gap: 1rem; 
-    overflow: auto; 
-    text-align: center;
-}
-
 .seperate-activity-containers {
     background-color: #afafaf;
     border: 0.3rem solid #00000096;
@@ -411,13 +402,23 @@ select:focus {
     border-radius: 1.5rem;
 }
 
-/* Calendar Page */
+/* Calendar */
 
 .calendar {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 1rem;
     text-align: center;
+}
+
+.calendar-main-container {
+    background-color: #8b8b8b;
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 90%;
+    max-width: 45rem;
+    max-height: fit-content;
 }
 
 .day {
@@ -428,6 +429,18 @@ select:focus {
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.select-booking {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+    border: 0.1rem solid #ddd;
+    width: 100%;
+    max-width: auto;
+    margin-bottom: 1.5rem;
+    background-color: #f8f8f8;
+    color: #555;
 }
 
 .day:hover {
@@ -442,17 +455,33 @@ select:focus {
 }
 
 .available {
-    background-color: #90ee90;
-    color: #006400;
+    background-color: #ffbf00;
+    color: #000000;
 }
 
-/* Times Page */
+.available:hover{
+    background-color: #b98a00;
+}
+
+/* Times*/
 
 .time-slots {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+}
+
+.times-main-container{
+    margin-top: 5rem;
+    background-color: #8b8b8b;
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    padding-bottom: 5rem;
+    width: 90%;
+    max-width: 45rem;
+    max-height: fit-content;
 }
 
 .time-slot {
@@ -478,17 +507,16 @@ select:focus {
 }
 
 .time-slot.available {
-    background-color: #add8e6;
-    color: #00509e;
+    background-color: #ffbf00;
+    color: #000000;
 }
 
-/* Success Page */
-
-.success-message {
-    text-align: center;
+.time-slot.available:hover {
+    background-color: #b98a00;
 }
 
-.success-message h1 {
-    color: #28a745;
-    margin-bottom: 2rem;
+/* Success */
+
+.sucessfull-book{
+    color: #ffbf00;
 }
