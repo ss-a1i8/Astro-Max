@@ -520,3 +520,87 @@ select:focus {
 .sucessfull-book{
     color: #ffbf00;
 }
+
+/* Profile */
+
+.main-profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #8b8b8b;
+    border-radius: 1.8rem;
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.3);
+    padding: 0.72rem;
+    gap: 1.2rem;
+    max-width: fit-content;
+    margin: 2.4rem auto;
+}
+
+.profile-sidebar {
+    background-color: #505050;
+    flex: 1;
+    max-width: fit-content;
+    border-radius: 1.2rem;
+    padding: 1.8rem;
+    text-align: center;
+}
+
+.profile-sidebar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
+    border: 3px solid #ffbf00;
+}
+
+.name-text-label {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 0.6rem;
+}
+
+.name-text-name {
+    margin-top: 0.6rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffbf00;
+}
+
+.main-profile-area {
+    flex: 3;
+    min-width: fit-content;
+    background-color: #505050;
+    border-radius: 1.2rem;
+    padding: 2.4rem;
+    max-width: 100%;
+}
+
+.main-profile-area h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #ffcc33;
+    margin-bottom: 1.2rem;
+}
+
+.main-profile-area p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: white;
+    margin-bottom: 1.2rem;
+}
+
+.main-profile-area ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main-profile-area li {
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.2;
+}
+
+.booking-details {
+    font-weight: bold;
+    color: #ffbf00;
+}
