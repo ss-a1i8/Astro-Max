@@ -32,7 +32,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         <a href="../public/booking_calendar.php" class="nav-link">Booking</a>
         <?php if ($isLoggedIn): ?>
             <?php if ($role === 'customer'): ?>
-                <a href="../public/customer.php" class="nav-link">Profile</a>
+                <a href="../public/profile.php" class="nav-link">Profile</a>
             <?php elseif ($role === 'staff'): ?>
                 <a href="../public/staff.php" class="nav-link">Dashboard</a>
             <?php elseif ($role === 'management'): ?>
