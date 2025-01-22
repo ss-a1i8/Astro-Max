@@ -62,7 +62,7 @@ $bookings = $booking_stmt->fetchAll(PDO::FETCH_ASSOC);
                     <ul>
                         <?php foreach ($bookings as $booking): ?>
                             <li>
-                                <?php echo htmlspecialchars($booking['booking_name']); ?> |
+                                <?php echo htmlspecialchars($booking['activity_name']); ?> |
                                 <span class="booking-details">
                                     Date: <?php echo htmlspecialchars($booking['booking_date']); ?> |
                                     Time: <?php echo htmlspecialchars($booking['booking_time']); ?> 
