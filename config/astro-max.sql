@@ -16,6 +16,7 @@ CREATE TABLE `bookings` (
   `booking_id` int(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `user_id` int(10) NOT NULL,
   `activity_id` int(10) NOT NULL,
+  `activity_name` VARCHAR(255) NOT NULL,
   `booking_date` date NOT NULL,
   `booking_time` time NOT NULL,
   FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`)
