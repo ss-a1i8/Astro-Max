@@ -127,6 +127,7 @@ body {
 
 .register-and-login-container {
     background-color: #8b8b8b;
+    border: 0.3rem solid #00000096;
     width: 100%;
     max-width: 25rem;
     max-height: fit-content;
@@ -227,10 +228,12 @@ label {
 
 .roles-changing-container {
     margin: 2.5rem;
-    background-color: #a0a0a0;
+    background-color: #8b8b8b;
+    border: 0.3rem solid #00000096;
     max-height: fit-content;
     padding: 1.5rem;
     border-radius: 1.5rem;
+    max-width: 14rem;
 }
 
 .management-headings {
@@ -276,7 +279,8 @@ select:focus {
 
 .staff-register-container {
     margin: 2.5rem;
-    background-color: #a0a0a0;
+    background-color: #8b8b8b;
+    border: 0.3rem solid #00000096;
     max-height: fit-content;
     max-width: fit-content;
     min-width: 25rem;
@@ -319,7 +323,8 @@ select:focus {
 
 .activity-management-container {
     margin: 2.5rem;
-    background-color: #a0a0a0;
+    background-color: #8b8b8b;
+    border: 0.3rem solid #00000096;
     max-height: fit-content;
     max-width: fit-content;
     min-width: 25rem;
@@ -330,7 +335,7 @@ select:focus {
 /* Activities */
 
 .seperate-activity-containers {
-    background-color: #afafaf;
+    background-color: #8b8b8b;
     border: 0.3rem solid #00000096;
     border-radius: 1rem;
     width: 20%;
@@ -396,7 +401,8 @@ select:focus {
 
 .delete-activity-container {
     margin: 2.5rem;
-    background-color: #a0a0a0;
+    background-color: #8b8b8b;
+    border: 0.3rem solid #00000096;
     max-height: fit-content;
     padding: 1.5rem;
     border-radius: 1.5rem;
@@ -413,6 +419,7 @@ select:focus {
 
 .calendar-main-container {
     background-color: #8b8b8b;
+    border: 0.3rem solid #00000096;
     border-radius: 1rem;
     box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.1);
     padding: 2rem;
@@ -475,6 +482,7 @@ select:focus {
 .times-main-container{
     margin-top: 5rem;
     background-color: #8b8b8b;
+    border: 0.3rem solid #00000096;
     border-radius: 1rem;
     box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.1);
     padding: 2rem;
@@ -527,6 +535,7 @@ select:focus {
     display: flex;
     flex-wrap: wrap;
     background-color: #8b8b8b;
+    border: 0.3rem solid #00000096;
     border-radius: 1.8rem;
     box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.3);
     padding: 0.72rem;
