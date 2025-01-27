@@ -4,6 +4,11 @@ require '../config/db.php';
 
 include '../templates/header.php';
 
+if ($_SESSION['role'] != 'management') {
+    header("Location: login.php");
+    exit();
+}
+
 $stmt = $pdo->prepare("SELECT user_id, username, role FROM users WHERE role IN ('staff', 'management')");
 $stmt->execute();
 $staffMembers = $stmt->fetchAll(PDO::FETCH_ASSOC);

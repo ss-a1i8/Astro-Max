@@ -19,5 +19,6 @@ CREATE TABLE `bookings` (
   `activity_name` VARCHAR(255) NOT NULL,
   `booking_date` date NOT NULL,
   `booking_time` time NOT NULL,
-  FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`)
+  FOREIGN KEY (`user_id`) REFERENCES `users`(`user_id`) ON DELETE CASCADE,
+  FOREIGN KEY (`activity_id`) REFERENCES `activities`(`activity_id`) ON DELETE CASCADE
 );
